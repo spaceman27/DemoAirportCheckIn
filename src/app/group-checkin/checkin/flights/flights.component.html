@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-card>
+      <mat-card-header>
+          <mat-card-title>Flights</mat-card-title>
+      </mat-card-header>                  
+      <mat-card-content>	
+          <div class="w100 pd2 flights">
+              <mat-grid-list cols="3" rowHeight="2:1">
+                  <mat-grid-tile>1</mat-grid-tile>
+                  <mat-grid-tile>2</mat-grid-tile>
+                  <mat-grid-tile>3</mat-grid-tile>
+                  <mat-grid-tile>4</mat-grid-tile>
+                  <mat-grid-tile>5</mat-grid-tile>
+                  <mat-grid-tile>6</mat-grid-tile>
+                  <mat-grid-tile>7</mat-grid-tile>
+                  <mat-grid-tile>8</mat-grid-tile>
+                  <mat-grid-tile>9</mat-grid-tile>
+                  <mat-grid-tile>10</mat-grid-tile>
+                  <mat-grid-tile>11</mat-grid-tile>
+                  <mat-grid-tile>12</mat-grid-tile>
+              </mat-grid-list>
+          </div>
+      </mat-card-content>  
+      <mat-card-footer class="pl4">
+          <div>
+            <button mat-icon-button (click)="openDialog()"><i class="material-icons">add_circle</i></button> 
+            <button mat-stroked-button (click)="openDialog()">Add Flight</button>
+          </div>
+          <div class="mt3">
+              <mat-form-field class="example-full-width">
+                  <input type="text" placeholder="Available flight or text entry" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+          </div>
+      </mat-card-footer>
+          
+  </mat-card>
+  
+</div>

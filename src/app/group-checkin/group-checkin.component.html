@@ -1,0 +1,9 @@
+<div  fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center" class="container">
+    <div *ngIf="lstGroups" class="group-nav-left">
+        <i class="material-icons nav-icon" (click)="navLeft()">arrow_back_ios</i>
+    </div>
+    <app-group-card *ngFor="let g of pagingGroup" [group]="g"></app-group-card>
+    <div *ngIf="lstGroups" class="group-nav-right">
+        <i class="material-icons nav-icon" (click)="navRight()">arrow_forward_ios</i>
+    </div>
+</div>

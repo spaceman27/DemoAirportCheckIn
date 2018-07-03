@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.mat-sidenav {
+  min-width: 270px;
+  max-width: 28%;
+}
+
+.has-border {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mat-list {
+  padding-top: 0;
+}
+
+.mat-list-item {
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.menu-button {
+  margin-right: 1rem;
+}
+.content-template {
+  overflow-x: hidden;
+}
+.mat-toolbar.mat-primary {
+  // background: #010101 !important;
+}
+$app-text-header-color: #F7921E;
+.app-text-header {
+  color: $app-text-header-color;
+}
+.side-bar-item {
+    color: $app-text-header-color;
+}

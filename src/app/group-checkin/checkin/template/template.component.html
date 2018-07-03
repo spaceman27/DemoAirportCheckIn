@@ -1,0 +1,34 @@
+<div fxLayout="row" fxLayout.xs="column" class="container">
+  <div fxFlex="50%" class="mr1">
+      <mat-card>
+          <mat-card-header>
+              <mat-card-title>Templates</mat-card-title>
+          </mat-card-header>                  
+          <mat-card-content>	
+            <div class="template w100 pa2">
+              <div *ngFor="let t of templates">
+                  <button mat-icon-button><i class="material-icons">remove_circle</i></button> 
+                  <span>{{t.key}}</span>
+                  <mat-slide-toggle color="primary"></mat-slide-toggle>                        
+              </div>
+            </div>
+          </mat-card-content>	
+          <mat-card-footer class="pl4 pb3">                    
+              <button mat-icon-button (click)="openDialog()"><i class="material-icons">add_circle</i></button> 
+              <button mat-stroked-button (click)="openDialog()">Add Template</button>
+          </mat-card-footer>	
+      </mat-card>
+  </div>
+  <div fxFlex="50%">
+      <mat-card>
+          <mat-card-header>
+              <mat-card-title>Details</mat-card-title>
+          </mat-card-header>                  
+          <mat-card-content>	
+              <div class="template w100 pd2">
+                  
+              </div>
+          </mat-card-content>                  
+      </mat-card>
+  </div>
+</div>

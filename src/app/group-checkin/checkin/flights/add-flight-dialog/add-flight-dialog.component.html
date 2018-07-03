@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add Flight Modal</h2>
+<mat-dialog-content>
+  <h3>Flight List</h3>
+  <div class="w100 mb1">
+      <button	mat-flat-button> Flight UA 3355 </button>      
+  </div>
+  <div class="w100 mb1">
+      <button	mat-flat-button> Flight DL 1000 </button>
+  </div>
+  <div class="w100 mb1">
+      <button	mat-flat-button> Flight AE 365 </button>
+  </div>
+  <div class="w100 mb1">
+      <button	mat-flat-button> Flight BR 245 </button>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button mat-button [mat-dialog-close]="true">OK</button>
+
+  <button mat-button mat-dialog-close>Cancel</button>  
+</mat-dialog-actions>

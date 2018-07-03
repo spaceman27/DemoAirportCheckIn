@@ -1,0 +1,57 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+// stylelint-disable-next-line selector-max-universal
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+
+/* Custom scroll bar Webkit
+   https://css-tricks.com/custom-scrollbars-in-webkit/ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:vertical {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+$scrollbar-fc: #90A4AE;
+/* Handle */
+::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: $scrollbar-fc; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive:vertical {
+  background: $scrollbar-fc; 
+}
+// Custom scroll for Internet Explorer
+body {
+  scrollbar-face-color: $scrollbar-fc;    
+  // scrollbar-track-color: #424242;
+  //  background-color:#a0a0a0;
+  //  scrollbar-face-color:#903030;
+  //  scrollbar-arrow-color:#FFFFFF;
+  //  scrollbar-track-color:#C0B0B0;
+  //  scrollbar-shadow-color:rgb(0,0,0);
+  //  scrollbar-highlight-color:rgb(0,0,0);
+  //  scrollbar-3dlight-color:#808080;
+  //  scrollbar-darkshadow-Color:#202020;
+}
+
+@import '~@angular/material/theming';

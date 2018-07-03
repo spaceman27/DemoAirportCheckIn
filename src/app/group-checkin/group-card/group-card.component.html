@@ -1,0 +1,13 @@
+<mat-card class="card-group" fxFlex="20%">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <span fxFlex="90%">{{group.key}}</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+    </mat-card-title>
+    <mat-card-content>
+      <!-- <div *ngFor="let item of g.links.children.linkedEntities">{{item.key}}</div> -->
+        <mat-form-field class="w100" >
+          <input matInput placeholder="Filter" [(ngModel)]="filter">
+        </mat-form-field> 
+        <mat-card class="group-item" *ngFor="let item of children | groupcheckinpipe: filter" (click)="navToCheckin(item)"> {{item.key}} </mat-card>
+    </mat-card-content>
+</mat-card>

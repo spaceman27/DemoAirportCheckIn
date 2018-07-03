@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <BaseApiUrl>https://vrtl-devapv/apvrest/checkinApi/v2/api</BaseApiUrl>
+   <WindowAuthentication>true</WindowAuthentication>   
+   <BaseAuthenticationUrl>https://vrtl-devapv/apvrest/authapi/v1/api/Authentication</BaseAuthenticationUrl>
+</configuration>

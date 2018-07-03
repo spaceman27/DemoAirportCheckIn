@@ -1,0 +1,116 @@
+<mat-tab-group class="container">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Templates <mat-icon>filter_frames</mat-icon>
+      </ng-template>
+      <div fxLayout="row" fxLayout.xs="column" class="container">
+          <div fxFlex="70%">
+            <p>
+                <mat-form-field>
+                        <mat-select placeholder="Template">
+                          <mat-option *ngFor="let item of templates" [value]="item">
+                            {{ item }}
+                          </mat-option>
+                        </mat-select>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                        <mat-select placeholder="Assign Logo">
+                          <mat-option *ngFor="let item of templates" [value]="item">
+                            {{ item }}
+                          </mat-option>
+                        </mat-select>
+                </mat-form-field>
+            </p>
+            <p>                
+                <mat-form-field>
+                        <mat-select placeholder="Class of service">
+                          <mat-option *ngFor="let item of classOfService" [value]="item">
+                            {{ item }}
+                          </mat-option>
+                        </mat-select>
+                </mat-form-field>
+            </p>
+            <div>
+                <p> Media </p>
+                <mat-radio-group>
+                    <mat-radio-button value="1" >Any</mat-radio-button>
+                    <mat-radio-button value="2">Flip</mat-radio-button>
+                    <mat-radio-button value="3" checked>Default</mat-radio-button>
+                    <mat-radio-button value="4">Video</mat-radio-button>
+                  </mat-radio-group>
+                <div class="media-select">
+                    <p><mat-checkbox checked=true>Yellow</mat-checkbox></p>
+                    <p><mat-checkbox checked=true>Red</mat-checkbox></p>
+                    <p><mat-checkbox>Blue</mat-checkbox></p>
+                    <p><mat-checkbox>Green</mat-checkbox></p>
+                </div>
+            </div>
+          </div>
+          <app-checkin-preview [checkin]="checkin" fxFlex="30%"></app-checkin-preview>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Flights <mat-icon>flight</mat-icon>
+      </ng-template>      
+      <div fxLayout="row" fxLayout.xs="column">
+          <div fxFlex="70%">
+              <p>
+                  <mat-form-field>
+                          <mat-select placeholder="AC / Flight Number">
+                            <mat-option *ngFor="let item of flights" [value]="item">
+                              {{ item }}
+                            </mat-option>
+                          </mat-select>
+                  </mat-form-field>
+              </p>
+              <p>
+                  <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Code Shares" value="">
+                  </mat-form-field>
+              </p>
+              <p>                  
+                  <mat-form-field>
+                          <mat-select placeholder="Additional Flights">
+                            <mat-option *ngFor="let item of flights" [value]="item">
+                              {{ item }}
+                            </mat-option>
+                          </mat-select>
+                  </mat-form-field>
+              </p>
+          </div>
+          <app-checkin-preview [checkin]="checkin" fxFlex="30%"></app-checkin-preview>
+      </div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          Fields <mat-icon>list</mat-icon>
+        </ng-template>
+        <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="70%">
+              
+                  <p *ngFor="let item of fields">
+                     <mat-form-field class="example-full-width">
+                       <input matInput placeholder="{{item.field}}" value="{{item.value}}">
+                       <mat-icon matSuffix>delete</mat-icon>  
+                     </mat-form-field>                  
+                  </p>
+              
+            </div>
+            <app-checkin-preview [checkin]="checkin" fxFlex="30%"></app-checkin-preview>
+        </div>
+      </mat-tab>
+      <mat-tab>
+          <ng-template mat-tab-label>
+            Scenario <mat-icon>settings</mat-icon>
+          </ng-template>
+          <div fxLayout="row" fxLayout.xs="column">
+              <div fxFlex="70%">
+                 
+              </div>
+              <app-checkin-preview [checkin]="checkin" fxFlex="30%"></app-checkin-preview>
+          </div>
+        </mat-tab>
+</mat-tab-group>

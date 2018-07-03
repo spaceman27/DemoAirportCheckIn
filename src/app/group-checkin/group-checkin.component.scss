@@ -1,0 +1,29 @@
+
+
+.container {
+    padding: 1em 3em 1em 3em;
+    position: relative;
+  }
+.group-nav {
+    background: transparent;
+    position: absolute;    
+    z-index: 1;
+    
+}
+$nav-icon-top: 19em;
+$nav-icon-lr: 1em;
+.group-nav-left {
+    @extend .group-nav;
+    top: $nav-icon-top;
+    left: $nav-icon-lr;
+}
+.group-nav-right {
+    @extend .group-nav;
+    top: $nav-icon-top;
+    right: $nav-icon-lr;
+}
+.nav-icon {
+   font-size: 3em;
+   width: 1em;
+   cursor: pointer;
+}
